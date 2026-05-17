@@ -1,0 +1,254 @@
+/* === FINAL CTA SECTION === */
+.finalcta-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d36262 0%, #e15252 50%, #d36262 100%);
+  padding: 5rem 2rem;
+  color: white;
+}
+
+/* === BACKGROUND ELEMENTS === */
+.background-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* === CONTAINER === */
+.finalcta-container {
+  position: relative;
+  z-index: 10;
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* === HEADING === */
+.finalcta-heading {
+  font-size: 3rem; /* 48px */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* === GRADIENT TEXT === */
+.gradient-text {
+  display: block;
+  background: linear-gradient(45deg, #e2d3c6, #ac875c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* === SUBTITLE === */
+.finalcta-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* === BUTTON WRAPPER === */
+.finalcta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* === CTA BUTTON === */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* === PRIMARY BUTTON === */
+.cta-btn.primary {
+  background: #e2d3c6;
+  color: #2d2626;
+  position: relative;
+}
+
+.cta-btn.primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #ac875c, #e2d3c6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-btn.primary:hover::before {
+  opacity: 1;
+}
+
+.cta-btn.primary span,
+.cta-btn.primary .arrow-icon {
+  position: relative;
+  z-index: 1;
+}
+
+/* === SECONDARY BUTTON === */
+.cta-btn.secondary {
+  border: 2px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.cta-btn.secondary:hover {
+  background: white;
+  color: #e15252;
+}
+
+/* === ICONS === */
+.arrow-icon,
+.chat-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.chat-icon {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.cta-btn.primary:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.cta-btn.secondary:hover .chat-icon {
+  transform: rotate(12deg);
+}
+
+/* === WAVE DECORATION === */
+.wave-decoration {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+}
+
+.wave-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* === ANIMATIONS === */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* === MEDIA QUERIES === */
+
+/* Screens larger than 480px */
+@media (min-width: 480px) {
+  .finalcta-heading {
+    font-size: 2.4rem;
+  }
+
+  .finalcta-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1.1rem;
+    padding: 0.85rem 1.7rem;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .finalcta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Medium Devices */
+@media (max-width: 768px) {
+  .finalcta-heading {
+    font-size: 2.5rem;
+  }
+
+  .finalcta-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .finalcta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    max-width: 300px;
+  }
+}
+
+/* Large Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .finalcta-heading {
+    font-size: 2.75rem;
+  }
+
+  .finalcta-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .cta-btn {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1025px) {
+  .finalcta-heading {
+    font-size: 3rem;
+  }
+
+  .finalcta-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .cta-btn {
+    font-size: 1.125rem;
+  }
+}

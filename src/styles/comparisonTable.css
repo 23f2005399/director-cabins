@@ -1,0 +1,116 @@
+/* === CT SECTION === */
+.ct-section {
+  background: linear-gradient(to bottom right, #fff, #f4f4f4);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.ct-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ct-container h2 {
+  font-size: 2.4rem;
+  color: #000;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.ct-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #e15252;
+  margin: 0.6rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* === TABLE WRAPPER === */
+.ct-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ct-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 1rem;
+  table-layout: fixed;
+}
+
+/* === HEADER === */
+.ct-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.ct-table th,
+.ct-table td {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ct-table th {
+  background-color: #454545;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* === SPECIAL ALT.F COLUMN === */
+.ct-table th:nth-child(2) {
+  background-color: #e15252;
+  color: #fff;
+}
+
+.ct-table td:nth-child(2) {
+  background-color: #fff5f5;
+  font-weight: 600;
+  color: #e15252;
+}
+
+/* === FIRST COLUMN === */
+.ct-table td:first-child {
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+}
+
+/* === OTHER CELLS === */
+.ct-table td:not(:first-child):not(:nth-child(2)) {
+  color: #444;
+}
+
+/* === ZEBRA STRIPING === */
+.ct-table tbody tr:nth-child(even) td:not(:nth-child(2)) {
+  background-color: #f9f9f9;
+}
+
+/* === HOVER EFFECT === */
+.ct-table tbody tr:hover td {
+  background-color: #f1f1f1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ct-container h2 {
+    font-size: 30px;
+  }
+
+  .ct-table th,
+  .ct-table td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

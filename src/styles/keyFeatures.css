@@ -1,0 +1,125 @@
+/* === KEY FEATURES SECTION === */
+.kf-section {
+  background: #f2f2f2;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* === CONTAINER === */
+.kf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kf-container h2 {
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  position: relative;
+}
+
+.kf-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: #e15252;
+  margin: 1rem auto 0 auto;
+  border-radius: 4px;
+}
+
+/* === GRID === */
+.kf-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* === CARD ITEM === */
+.kf-item {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+}
+
+.kf-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* === ICON === */
+.kf-icon {
+  font-size: 2rem;
+  color: #e15252;
+  margin-bottom: 0.8rem;
+  animation: popIn 0.6s ease;
+}
+
+/* === TEXT === */
+.kf-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* === ANIMATION === */
+@keyframes popIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablets and Medium Screens */
+@media (max-width: 1024px) {
+  .kf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kf-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Devices - 2 per row */
+@media (max-width: 600px) {
+  .kf-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .kf-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .kf-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .kf-icon {
+    font-size: 1.6rem;
+  }
+
+  .kf-item p {
+    font-size: 0.95rem;
+  }
+}

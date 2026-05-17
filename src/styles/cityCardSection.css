@@ -1,0 +1,154 @@
+/* === CITY SECTION BASE STYLES === */
+
+.city-section {
+  padding: 4rem 2rem;
+  background: #fafafa;
+}
+
+.city-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.city-heading {
+  font-size: 2.6rem;
+  color: #000;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 65px;
+  margin-left: 40px;
+}
+
+.city-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background-color: #e15252;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 4px;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.city-card {
+  position: relative;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 9px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.city-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.city-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  text-align: left;
+}
+
+.city-overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+
+/* Extra Small Devices (phones <576px) */
+/* Extra Small Devices (phones <576px) */
+@media (max-width: 575.98px) {
+  .city-section {
+    padding: 3rem 1rem;
+  }
+
+  .city-heading {
+    font-size: 1.6rem;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  /* Force 2 columns on mobile */
+  .city-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .city-card {
+    height: 200px;
+  }
+
+  .city-overlay h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Small Devices (576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .city-heading {
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+
+  .city-card {
+    height: 220px;
+  }
+}
+
+/* Medium Devices (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .city-heading {
+    font-size: 2.2rem;
+    margin-left: 20px;
+    margin-bottom: 55px;
+  }
+
+  .city-card {
+    height: 230px;
+  }
+}
+
+/* Large Devices (992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .city-heading {
+    font-size: 2.4rem;
+    margin-left: 30px;
+  }
+
+  .city-card {
+    height: 240px;
+  }
+}
+
+/* Extra Large Devices (≥1200px) */
+@media (min-width: 1200px) {
+  .city-heading {
+    font-size: 2.6rem;
+    margin-left: 40px;
+  }
+
+  .city-card {
+    height: 240px;
+  }
+}
